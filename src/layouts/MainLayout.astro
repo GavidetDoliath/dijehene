@@ -25,7 +25,38 @@ const { title, description = "Rédactrice Web SEO de haut vol - Design & Perform
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://dijehene.vercel.app" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dijehene.vercel.app" />
+    <meta property="og:site_name" content="Djihene Fenzar - Rédactrice Web SEO" />
+    <meta property="og:image" content="https://dijehene.vercel.app/og-image.jpg" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Djihene Fenzar",
+      "jobTitle": "Rédactrice Web SEO",
+      "url": "https://dijehene.vercel.app",
+      "sameAs": [],
+      "knowsAbout": ["SEO", "Rédaction Web", "Content Marketing", "Stratégie Éditoriale"],
+      "description": "Rédactrice Web SEO de haut vol - Design & Performance."
+    })}
+    </script>
+
     <style>
       @font-face {
         font-family: 'Instrument Serif';
